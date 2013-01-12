@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%h1= tour.title
+
+%p
+  %em= tour.teaser
+
+%iframe{ width: 1200, height: 600, frameborder: 0, scrolling: 'no', marginheight: 0, marginwidth: 0, src: iframe_url(@tour) }
+
+%p
+  = tour.description
+
+%p
+  = link_to 'Edit', edit_tour_path(@tour)
+  \|
+  = link_to 'Back', tours_path
+  \|
+  = link_to 'Destroy', @tour, method: :delete, data: { confirm: 'Are you sure?'}

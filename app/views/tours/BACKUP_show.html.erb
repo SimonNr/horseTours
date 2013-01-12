@@ -1,0 +1,44 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1>
+    <b>Title:</b>
+    <%= @tour.title %>
+  </h1>
+</p>
+
+<p>
+  <b>Teaser:</b>
+  <%= @tour.teaser %>
+</p>
+
+<p>
+  <b>Difficulty:</b>
+  <%= @tour.difficulty %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @tour.duration %>
+</p>
+
+<p>
+  <iframe src="iframe_url(@tour)">
+  </iframe>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @tour.description %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @tour.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_tour_path(@tour) %> |
+<%= link_to 'Back', tours_path %>

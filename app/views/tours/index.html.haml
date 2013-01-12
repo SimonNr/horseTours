@@ -1,0 +1,9 @@
+%h1 horseTours
+
+%ul
+  -	@tour.each do |tour|
+	%li= link_to tour.title, tour
+
+%br
+
+=link_to 'New Tour', new_tour_path
