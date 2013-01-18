@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'jquery-rails'
 gem 'rails', '3.2.11'
+# gem 'thin'
+gem 'heroku'
+gem 'paperclip', '~> 3.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

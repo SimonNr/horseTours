@@ -1,6 +1,10 @@
 HorseTours::Application.routes.draw do
   resources :tours
 
+  get 'tours/index'
+  root :to => 'tours#index'
+
+  get 'tours/new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
