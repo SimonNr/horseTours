@@ -21,11 +21,13 @@
   </div>
   <div class="field">
     <%= f.label :difficulty %><br />
-    <%= f.text_field :difficulty %>
+
+    <%= f.select :difficulty, [['High','high'],['Medium','medium'],['Low','low']] %>
+
   </div>
   <div class="field">
-    <%= f.label :duration %><br />
-    <%= f.time_select :duration %>
+    <%= f.label :duration %> in Minuten<br />
+      <%= f.select :duration, 1..600 %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
