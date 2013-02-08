@@ -4,7 +4,9 @@ class CreateTours < ActiveRecord::Migration
       t.string :title
       t.string :teaser
       t.string :difficulty
-      t.time :duration
+      t.integer :days
+      t.integer :hours
+      t.integer :minutes
       t.text :description
       t.string :url
 

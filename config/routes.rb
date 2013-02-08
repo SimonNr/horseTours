@@ -1,8 +1,8 @@
-HorseTours::Application.routes.draw do
+HorseTours::Application.routes.draw do  get 'welcome/index'
   resources :tours
 
-  get 'tours/index'
-  root :to => 'tours#index'
+  get 'welcome/index'
+  root :to => 'welcome#index'
 
   get 'tours/new'
 

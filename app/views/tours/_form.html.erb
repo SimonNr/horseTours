@@ -22,12 +22,19 @@
   <div class="field">
     <%= f.label :difficulty %><br />
 
-    <%= f.select :difficulty, [['High','high'],['Medium','medium'],['Low','low']] %>
-
+    <%= f.select :difficulty, [['Low','low'],['Medium','medium'],['High','high']] %>
   </div>
   <div class="field">
-    <%= f.label :duration %> in Minuten<br />
-      <%= f.select :duration, 1..600 %>
+    Tage: <%= f.label :days %><br />
+    <%= f.select :days, 0..14 %>
+  </div>
+  <div class="field">
+    Stunden: <%= f.label :hours %><br />
+    <%= f.select :hours, 0..24 %>
+  </div>
+  <div class="field">
+    Minuten: <%= f.label :minutes %><br />
+    <%= f.select :minutes, 0..60 %>
   </div>
   <div class="field">
     <%= f.label :description %><br />

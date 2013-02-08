@@ -1,12 +1,8 @@
-
-
 <p id="notice"><%= notice %></p>
 
 <p>
-  <h1>
-    <b>Title:</b>
-    <%= @tour.title %>
-  </h1>
+  <b>Title:</b>
+  <%= @tour.title %>
 </p>
 
 <p>
@@ -20,8 +16,18 @@
 </p>
 
 <p>
-  <b>Duration:</b>
-  <%= @tour.duration %>
+  <b>Days:</b>
+  <%= @tour.days %>
+</p>
+
+<p>
+  <b>Hours:</b>
+  <%= @tour.hours %>
+</p>
+
+<p>
+  <b>Minutes:</b>
+  <%= @tour.minutes %>
 </p>
 
 <p>
@@ -32,7 +38,6 @@
   <b>Description:</b>
   <%= @tour.description %>
 </p>
-
 
 <%= link_to 'Edit', edit_tour_path(@tour) %> |
 <%= link_to 'Back', tours_path %>
