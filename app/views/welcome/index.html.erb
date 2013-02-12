@@ -1,10 +1,19 @@
 <html>
 	<head>
-		Überschrift
+		<h3>HorseTours</h3>
 	</head>
 
 	<body>
-		<p>test</p>
-		<%= link_to 'Tours', tours_path %>
+		<div id="content">
+			<div id="header">
+				Herzlich Willkommen auf HorseTours! 
+				<br>Hier können sie Ausreittouren und Turniere eintragen. 
+			</div>
+			<div id="menue">
+				<li> <%= link_to 'Tours', tours_path %> </li>
+				<li> <a href="#">Turniere</a> </li>
+				<li> <a href="#">Profil</a> </li>
+			</div>
+		</div>
 	</body>
 </html>
