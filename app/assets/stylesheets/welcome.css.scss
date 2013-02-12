@@ -1,3 +1,45 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+*{
+	background-color:#F0F0E8;
+}
+h3 {
+	text-align:left;
+	border-bottom: 1px solid silver;
+	padding-left: 25px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+
+}
+
+body{
+	text-align:center;
+	margin:auto;
+}
+#content{
+	width:100%;
+	position:relative;
+}
+
+#header{
+	padding: 20px;
+	margin-left:12px;
+	margin-right:12px;
+	background-color:white;
+	float:right;
+	width: 85%;
+
+}
+
+#menue{
+	border: 1px solid silver;
+	float:left;
+	width:10%;
+	list-style-type: none;
+}
+#menue li{
+	padding: 2px;
+}
