@@ -6,6 +6,9 @@ HorseTours::Application.routes.draw do  get 'welcome/index'
 
   get 'tours/new'
 
+  get 'users/sign_out'
+  root :to => 'welcome#index'
+
   devise_for :users
   devise_for :admins
 

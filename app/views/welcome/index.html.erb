@@ -2,7 +2,14 @@
 	<head>
 		<div id="header">
 			<h3>HorseTours</h3>
-			<h4><a href="#">Login</a></h4>
+			<h4><div id="user_nav">
+				<% if user_signed_in? %>
+    				Signed in as <%= current_user.email %>. Not you?
+	    			<%= link_to "Sign out", destroy_user_session_path %>
+	  			<% else %>
+	    			<%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+	  			<% end %>
+			</div></h4>
 		</div>
 	</head>
 
