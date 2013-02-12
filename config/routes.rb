@@ -6,6 +6,9 @@ HorseTours::Application.routes.draw do  get 'welcome/index'
 
   get 'tours/new'
 
+  devise_for :users
+  devise_for :admins
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
