@@ -3,9 +3,13 @@
 <div id="content">
 	<div id="section">
 		<ul>
-  		  <% @tours.each do |tour| %>
-  	 	 <li><%= link_to tour.title, tour %></li>
- 		   <% end %>
+			<p>Title&nbsp;&nbsp;|&nbsp;&nbsp;Teaser&nbsp;&nbsp;|&nbsp;&nbsp;Difficulty</p>
+  		  	<% @tours.each do |tour| %>
+  	 	 		<li>
+  	 	 			<%= link_to tour.title, tour %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= tour.teaser %>
+  	 	 			&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= tour.difficulty %>
+  	 	 		</li>
+ 		   	<% end %>
 		</ul>
 	</div>
 	<div id="menue">
