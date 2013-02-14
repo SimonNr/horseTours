@@ -1,3 +1,39 @@
 // Place all the styles related to the tours controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#section p, b {
+	background-color: white;
+} 
+
+#new_tour {
+	background-color: white;
+}
+#new_tour .field{
+	background-color: white;
+}
+
+#new_tour .field label, select, input, textarea{
+	background-color: white;
+}
+
+
+#new_tour .actions{
+	background-color: white;
+}
+
+.edit_tour {
+	background-color: white;
+}
+.edit_tour .field{
+	background-color: white;
+}
+
+.edit_tour .field label, select, input, textarea{
+	background-color: white;
+}
+
+
+.edit_tour .actions{
+	background-color: white;
+}
