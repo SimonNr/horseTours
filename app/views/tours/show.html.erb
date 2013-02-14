@@ -1,47 +1,53 @@
 <%= render 'header' %>
 
-<p id="notice"><%= notice %></p>
+<div id="section">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <h1>
-    <b>Title:</b>
-    <%= @tour.title %>
-  </h1>
-</p>
+  <p>
+    <h1>
+      <b>Title:</b>
+      <%= @tour.title %>
+    </h1>
+  </p>
 
-<p>
-  <b>Teaser:</b>
-  <%= @tour.teaser %>
-</p>
+  <p>
+    <b>Teaser:</b>
+    <%= @tour.teaser %>
+  </p>
 
-<p>
-  <b>Difficulty:</b>
-  <%= @tour.difficulty %>
-</p>
+  <p>
+    <b>Difficulty:</b>
+    <%= @tour.difficulty %>
+  </p>
 
-<p>
-  <b>Days:</b>
-  <%= @tour.days %>
-</p>
+  <p>
+    <b>Days:</b>
+    <%= @tour.days %>
+  </p>
 
-<p>
-  <b>Hours:</b>
-  <%= @tour.hours %>
-</p>
+  <p>
+    <b>Hours:</b>
+    <%= @tour.hours %>
+  </p>
 
-<p>
-  <b>Minutes:</b>
-  <%= @tour.minutes %>
-</p>
+  <p>
+    <b>Minutes:</b>
+    <%= @tour.minutes %>
+  </p>
 
-<p>
-  <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<%= @tour.url %>"></iframe>
-</p>
+  <p>
+    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<%= @tour.url %>"></iframe>
+  </p>
 
-<p>
-  <b>Description:</b>
-  <%= @tour.description %>
-</p>
+  <p>
+    <b>Description:</b>
+    <%= @tour.description %>
+  </p>
+</div>
 
-<%= link_to 'Edit', edit_tour_path(@tour) %> |
-<%= link_to 'Back', tours_path %>
+<div id="menue">
+  <ul>
+    <li><%= link_to 'Edit', edit_tour_path(@tour) %></li>
+    <li><%= link_to 'Back', tours_path %></li>
+  </ul>
+</div>

@@ -29,6 +29,16 @@
 	float: left;
 }
 
+#header h3 a:link {
+	text-decoration: none;
+}
+
+#header h3 a:hover {
+	text-decoration: none;
+	background-color: #F0F0E8;
+	color: #666666;
+}
+
 #header h4 {
 	text-align: right;
 }
@@ -52,19 +62,46 @@ body{
 	height: auto;
 	left: 162px;
 	width:70%;
+	text-align: left;
+}
+
+#section h1 {
+	background-color: white;
+}
+
+#new_tour {
+	background-color: white;
+}
+#new_tour .field{
+	background-color: white;
+}
+
+#new_tour .field label, select, input, textarea{
+	background-color: white;
+}
+
+
+#new_tour .actions{
+	background-color: white;
 }
 
 #section ul{
 	background-color: white;
-	list-style-type: none;
 }
 
 #section ul li{
 	background-color: white;
-	list-style-type: none;
 }
 #section ul li a{
 	background-color: white;
+	font-size: 18px;
+}
+#section ul li a:link{
+	text-decoration: none;
+}
+#section ul li a:hover{
+	background-color: white;
+	color: black;
 }
 
 #menue{
@@ -83,7 +120,13 @@ body{
 	background-color: #F8F8F0;
 	list-style-type: none;
 }
-
 #menue ul li a {
+	padding: 5px;
 	background-color: #F8F8F0;
+}
+
+
+#menue ul li a:hover {
+	background-color: #F8F8F0;
+	color: black;
 }

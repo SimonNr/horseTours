@@ -1,11 +1,17 @@
 <%= render 'header' %>
 
-<h1>Editing tour</h1>
+<div id="section">
+	<h1>Editing tour</h1>
 
-<% if user_signed_in? %>
-	<%= render 'form' %>
-<% else %>
-	<%= "Unable to edit tour, you are not logged in!" %>
-<% end %>
+	<% if user_signed_in? %>
+		<%= render 'form' %>
+	<% else %>
+		<%= "Unable to edit tour, you are not logged in!" %>
+	<% end %>
+</div>
 
-<%= link_to 'Back', tours_path %>
+<div id="menue">
+	<ul>
+		<li><%= link_to 'Back', tours_path %></li>
+	</ul>
+</div>
