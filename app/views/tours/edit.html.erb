@@ -1,3 +1,5 @@
+<%= render 'header' %>
+
 <h1>Editing tour</h1>
 
 <% if user_signed_in? %>
@@ -6,5 +8,4 @@
 	<%= "Unable to edit tour, you are not logged in!" %>
 <% end %>
 
-<%= link_to 'Show', @tour %> |
 <%= link_to 'Back', tours_path %>
