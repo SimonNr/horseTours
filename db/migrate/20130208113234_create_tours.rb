@@ -1,5 +1,5 @@
 class CreateTours < ActiveRecord::Migration
-  def self.up
+  def change
     create_table :tours do |t|
       t.string :title
       t.string :teaser
@@ -12,9 +12,5 @@ class CreateTours < ActiveRecord::Migration
 
       t.timestamps
     end
-  end
-
-  def self.down
-    drop_table :tours
   end
 end
