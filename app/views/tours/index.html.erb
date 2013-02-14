@@ -5,8 +5,10 @@
 		<ul>
 			<p>Title&nbsp;&nbsp;|&nbsp;&nbsp;Teaser&nbsp;&nbsp;|&nbsp;&nbsp;Difficulty</p>
   		  	<% @tours.each do |tour| %>
-  	 	 		<li><%= link_to tour.title, tour %>&nbsp;&nbsp;|&nbsp;&nbsp;<%= tour.teaser%>
-  	 	 			&nbsp;&nbsp;|&nbsp;&nbsp;<%= tour.difficulty%></li>
+  	 	 		<li>
+  	 	 			<%= link_to tour.title, tour %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= tour.teaser %>
+  	 	 			&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= tour.difficulty %>
+  	 	 		</li>
  		   	<% end %>
 		</ul>
 	</div>
