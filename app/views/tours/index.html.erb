@@ -1,9 +1,19 @@
-<h1>horseTours</h1>
-
-<ul>
-    <% @tours.each do |tour| %>
-    <li><%= link_to tour.title, tour %></li>
-    <% end %>
-</ul>
-<%= link_to 'New Tour', new_tour_path %> | 
-<%= link_to 'Back', welcome_index_path %>
+<div id="header">
+	<h3>horseTours</h3>
+	<h4><a href="#">Login</a></h4>
+</div>
+<div id="content">
+	<div id="section">
+		<ul>
+  		  <% @tours.each do |tour| %>
+  	 	 <li><%= link_to tour.title, tour %></li>
+ 		   <% end %>
+		</ul>
+	</div>
+	<div id="menue">
+		<ul>
+			<li><%= link_to 'New Tour', new_tour_path %></li>
+			<li><%= link_to 'Back', welcome_index_path %></li>
+		</ul>
+	</div>
+</div>
