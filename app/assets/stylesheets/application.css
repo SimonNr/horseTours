@@ -30,7 +30,7 @@ table, tr, td {
 	background-color: white;
 }
 
-div label, input {
+div label, input, i {
 	background-color: white;
 }
 
@@ -45,6 +45,10 @@ div label, input {
 }
 
 #new_user, #new_user div{
+	background-color: white;
+}
+
+#edit_user, #edit_user div {
 	background-color: white;
 }
 
@@ -67,6 +71,11 @@ div label, input {
 	text-align: right;
 }
 
+#header h4 a:hover {
+	background-color: #F0F0E8;
+	color: #666666;
+}
+
 
 #content{
 	width:100%;
@@ -84,7 +93,7 @@ div label, input {
 	left: 162px;
 	width:70%;
 	text-align: left;
-	font-size: 16px;
+	font-size: 14px;
 	box-shadow: 10px 0px #666;
 }
 
@@ -138,6 +147,7 @@ div label, input {
 	padding: 2px;
 	background-color: #F8F8F0;
 	list-style-type: none;
+	color: #666666;
 }
 #menue ul li a {
 	padding: 5px;
