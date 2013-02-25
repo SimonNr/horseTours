@@ -6,6 +6,7 @@ gem 'rails', '3.2.11'
 gem 'heroku'
 gem 'paperclip', '~> 3.0'
 gem 'devise'
+gem 'rolify'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

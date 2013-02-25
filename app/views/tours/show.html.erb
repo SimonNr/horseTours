@@ -45,7 +45,9 @@
 
 <div id="menue">
   <ul>
-    <li><%= link_to 'Edit', edit_tour_path(@tour) %></li>
+    <% if @tour.creatorID == current_user.id %>
+      <li><%= link_to 'Edit', edit_tour_path(@tour) %></li>
+    <% end %>
     <li><%= link_to 'Back', tours_path %></li>
   </ul>
 </div>
