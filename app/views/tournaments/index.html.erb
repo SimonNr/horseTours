@@ -1,0 +1,33 @@
+<div id="content">
+    <div id="section">
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Startdate</th>
+                <th>Enddate</th>
+                <th>Registrationoffice</th>
+                <th>Deadline</th>
+            </tr>
+
+        <% @tournaments.each do |tournament| %>
+          <tr>
+            <td><%= link_to tournament.title, tournament %></td>
+            <td><%= tournament.category %></td>
+            <td><%= tournament.startDate %></td>
+            <td><%= tournament.endDate %></td>
+            <td><%= tournament.registrationOffice %></td>
+            <td><%= tournament.deadline %></td>
+          </tr>
+        <% end %>
+        </table>
+    </div>
+
+<br />
+    <div id="menue">
+        <ul>
+            <li><%= link_to 'New Tournament', new_tournament_path %></li>
+            <li><%= link_to 'Back', welcome_index_path %></li>
+        </ul>
+    </div>
+</div>

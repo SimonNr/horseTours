@@ -1,0 +1,16 @@
+<div id="content">
+	<div id="section">
+		<h1>New tournament</h1>
+		
+		<% if user_signed_in? %>
+			<%= render 'form' %>
+		<% else %>
+			<%= "Unable to create tour, you are not logged in!" %>
+		<% end %>
+	</div>
+	<div id="menue">
+		<ul>
+			<li><%= link_to 'Back', tournaments_path %></li>
+		</ul>
+	</div>
+</div>
