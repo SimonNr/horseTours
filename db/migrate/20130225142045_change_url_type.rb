@@ -1,5 +1,6 @@
 class ChangeUrlType < ActiveRecord::Migration
   def change
-  	change_column :tours, :url, :text
+  	remove_column :tours, :url
+  	add_column :tours, :url, :text
   end
 end
