@@ -39,15 +39,16 @@
 
   <p>
     <b>Description:</b>
-    <%= @tour.description %>
+    <%= simple_format @tour.description %>
   </p>
 </div>
 
 <div id="menue">
   <ul>
-    <% if @tour.creatorID == current_user.id %>
+    <% if @tour.creator_id == current_user.id %>
       <li><%= link_to 'Edit', edit_tour_path(@tour) %></li>
     <% end %>
+    <li><%= link_to 'destroy', @tour, :confirm => 'Sure?', :method => :delete %>
     <li><%= link_to 'Back', tours_path %></li>
   </ul>
 </div>
