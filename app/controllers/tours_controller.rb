@@ -41,7 +41,7 @@ class ToursController < ApplicationController
   # POST /tours.json
   def create
     @tour = Tour.new(params[:tour])
-    @tour.creatorID = current_user.id
+    @tour.creator_id = current_user.id
 
     respond_to do |format|
       if @tour.save
