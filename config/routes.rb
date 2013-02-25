@@ -1,5 +1,6 @@
 HorseTours::Application.routes.draw do  get 'welcome/index'
   resources :tours
+  resources :tournaments
 
   get 'welcome/index'
   root :to => 'welcome#index'
