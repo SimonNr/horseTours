@@ -1,14 +1,23 @@
 <div id="content">
 	<div id="section">
-		<ul>
-			<p>Title&nbsp;&nbsp;|&nbsp;&nbsp;Teaser&nbsp;&nbsp;|&nbsp;&nbsp;Difficulty</p>
+		<table>
+			<tr>
+				<th>Title</th>
+				<th>Teaser</th>
+				<th>Difficulty</th>
+			</tr>
+
   		  	<% @tours.each do |tour| %>
-  	 	 		<li>
-  	 	 			<%= link_to tour.title, tour %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= tour.teaser %>
-  	 	 			&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= tour.difficulty %>
-  	 	 		</li>
+  	 	 		<tr>
+  	 	 			<td><%= link_to tour.title, tour %></td>
+  	 	 			<td><%= tour.teaser %></td>
+  	 	 			<td><%= tour.difficulty %></td>
+  	 	 		</tr>
  		   	<% end %>
-		</ul>
+
+ 		   </table>
+
+
 	</div>
 	<div id="menue">
 		<ul>
