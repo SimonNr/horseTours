@@ -14,6 +14,26 @@
 *{
 	background-color:#F0F0E8;
 }
+
+body{
+	text-align:center;
+	margin:auto;
+}
+
+th {
+	padding: 3px;
+	min-width: 100px;
+}
+
+table, tr, td {
+	border: none;
+	background-color: white;
+}
+
+div label, input {
+	background-color: white;
+}
+
 #header {
 	border-bottom: 1px solid silver;
 	padding-left: 25px;
@@ -22,6 +42,10 @@
 	padding-right: 25px;
 	margin-bottom: 10px;	
 	background-color:#F0F0E8;
+}
+
+#new_user, #new_user div{
+	background-color: white;
 }
 
 #header h3 {
@@ -33,7 +57,7 @@
 	text-decoration: none;
 }
 
-#header h3 a:hover {
+#header h3 a:hover, h3 a {
 	text-decoration: none;
 	background-color: #F0F0E8;
 	color: #666666;
@@ -43,10 +67,7 @@
 	text-align: right;
 }
 
-body{
-	text-align:center;
-	margin:auto;
-}
+
 #content{
 	width:100%;
 	position:relative;
@@ -67,7 +88,11 @@ body{
 	box-shadow: 10px 0px #666;
 }
 
-#section h1 {
+#section h1, h2 {
+	background-color: white;
+}
+
+#section a {
 	background-color: white;
 }
 
