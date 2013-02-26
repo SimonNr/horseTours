@@ -45,10 +45,14 @@
 
 <div id="menue">
   <ul>
-    <% if @tour.creator_id == current_user.id %>
-      <li><%= link_to 'Edit', edit_tour_path(@tour) %></li>
+    <% if user_signed_in? %>
+      <% if @tour.creator_id == current_user.id or current_user.has_role :admin? %>
+        <li><%= link_to 'Edit', edit_tour_path(@tour) %></li>
+      <% end %>
+
+      <% if current_user.has_role :admin %>
+      <li><%= link_to 'Destroy', @tour, :confirm => 'Are you sure?', :method => :delete %></li>
     <% end %>
-    <li><%= link_to 'destroy', @tour, :confirm => 'Sure?', :method => :delete %>
     <li><%= link_to 'Back', tours_path %></li>
   </ul>
 </div>
