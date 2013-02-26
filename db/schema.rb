@@ -64,20 +64,6 @@ ActiveRecord::Schema.define(:version => 20130225142045) do
   add_index "tour_categories", ["category_id"], :name => "index_tour_categories_on_category_id"
   add_index "tour_categories", ["tour_id"], :name => "index_tour_categories_on_tour_id"
 
-  create_table "tournaments", :force => true do |t|
-    t.string   "title"
-    t.string   "category"
-    t.date     "startDate"
-    t.date     "endDate"
-    t.string   "registrationOffice"
-    t.date     "deadline"
-    t.text     "information"
-    t.string   "place"
-    t.integer  "creatorID"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-  end
-
   create_table "tours", :force => true do |t|
     t.string   "title"
     t.string   "teaser"
@@ -86,10 +72,10 @@ ActiveRecord::Schema.define(:version => 20130225142045) do
     t.integer  "hours"
     t.integer  "minutes"
     t.text     "description"
-    t.text     "url",         :limit => 255
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "creator_id"
+    t.text     "url"
   end
 
   create_table "users", :force => true do |t|
