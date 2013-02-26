@@ -8,6 +8,7 @@ gem 'paperclip', '~> 3.0'
 gem 'devise'
 gem 'rolify'
 gem 'RedCloth'
+gem 'cancan'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

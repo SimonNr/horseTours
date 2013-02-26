@@ -46,10 +46,13 @@
 <div id="menue">
   <ul>
     <% if user_signed_in? %>
+      <% if current_user.id == @tour.creator_id %>
         <li><%= link_to 'Edit', edit_tour_path(@tour) %></li>
+      <% end %>
+    <% end %>
 
-        <li><%= link_to 'Destroy', @tour, :confirm => 'Are you sure?', :method => :delete %></li>
-
+    <% if can? :Destroy, @tour %>
+      <li><%= link_to 'Destroy', @tour, :confirm => 'Are you sure?', :method => :delete %></li>
     <% end %>
     <li><%= link_to 'Back', tours_path %></li>
   </ul>

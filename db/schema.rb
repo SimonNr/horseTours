@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130225142045) do
+ActiveRecord::Schema.define(:version => 20130225143741) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -63,6 +63,20 @@ ActiveRecord::Schema.define(:version => 20130225142045) do
 
   add_index "tour_categories", ["category_id"], :name => "index_tour_categories_on_category_id"
   add_index "tour_categories", ["tour_id"], :name => "index_tour_categories_on_tour_id"
+
+  create_table "tournaments", :force => true do |t|
+    t.string   "title"
+    t.string   "category"
+    t.date     "startDate"
+    t.date     "endDate"
+    t.string   "registrationOffice"
+    t.date     "deadline"
+    t.text     "information"
+    t.string   "place"
+    t.integer  "creator_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "tours", :force => true do |t|
     t.string   "title"

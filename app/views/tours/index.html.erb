@@ -21,7 +21,9 @@
 	</div>
 	<div id="menue">
 		<ul>
-			<li><%= link_to 'New Tour', new_tour_path %></li>
+			<% if can? :Create, Tour %>
+				<li><%= link_to 'New Tour', new_tour_path %></li>
+			<% end %>
 			<li><%= link_to 'Back', welcome_index_path %></li>
 		</ul>
 	</div>

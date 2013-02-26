@@ -10,6 +10,6 @@ FactoryGirl.define do
     deadline "2013-02-25"
     information "MyText"
     place "MyString"
-    creatorID 1
+    creator_id 1
   end
 end

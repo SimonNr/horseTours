@@ -9,7 +9,7 @@ class CreateTournaments < ActiveRecord::Migration
       t.date :deadline
       t.text :information
       t.string :place
-      t.integer :creatorID
+      t.integer :creator_id
 
       t.timestamps
     end
