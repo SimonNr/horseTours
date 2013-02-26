@@ -101,8 +101,9 @@ div label, input, i {
 	background-color: white;
 }
 
-#section a {
+#section a, a:hover {
 	background-color: white;
+	color: #333333;
 }
 
 
