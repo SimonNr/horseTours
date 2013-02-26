@@ -8,7 +8,6 @@
 
 ['user', 'admin'].each do |role|
 	Role.find_or_create_by_name role
-end
 
 u = User.create(username:"test", email:"test@test.de", password:"123456", password_confirmation:"123456")
 u.add_role :user

@@ -39,7 +39,7 @@
 
   <p>
     <b>Description:</b>
-    <%= @tour.description %>
+    <%= simple_format @tour.description %>
   </p>
 </div>
 
@@ -52,7 +52,6 @@
 
       <% if current_user.has_role :admin %>
       <li><%= link_to 'Destroy', @tour, :confirm => 'Are you sure?', :method => :delete %></li>
-    <% end %>
     <% end %>
     <li><%= link_to 'Back', tours_path %></li>
   </ul>
