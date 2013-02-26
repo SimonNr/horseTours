@@ -49,16 +49,15 @@
 
 <div id="menue">
 
-  <div id="topMenue">
-    <ul>
-            <li> <%= link_to 'Tours', tours_path %> </li>
-            <li> <%= link_to 'Tournaments', tournaments_path %> </li>
-            <li> <%= link_to 'Profile', edit_user_registration_path %> </li>
-    </ul>
-  </div>
+  <%= render 'shared/nav' %>
 
   <ul>
-    <li><%= link_to 'Edit', edit_tournament_path(@tournament) %></li>
+    <% if user_signed_in? %>
+      <% if (current_user.has_role? :admin) or (current_user.id == @tournament.creator_id) %>
+        <li><%= link_to 'Edit', edit_tournament_path(@tournament) %></li>
+        <li><%= link_to 'Destroy', @tournament, :confirm => 'Are you sure?', :method => :delete %></li>
+      <% end %>
+    <% end %>
     <li><%= link_to 'Back', tournaments_path %></li>
   </ul>
 </div>

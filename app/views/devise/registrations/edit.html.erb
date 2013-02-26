@@ -22,6 +22,7 @@
 
 
 <div id="menue">
+  <%= render 'shared/nav' %>
   <ul>
     <li>  <%= link_to "Delete account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></li>
     <li><%= link_to "Back", :back %></li>

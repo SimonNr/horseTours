@@ -41,6 +41,7 @@ class TournamentsController < ApplicationController
   # POST /tournaments.json
   def create
     @tournament = Tournament.new(params[:tournament])
+    @tournament.creator_id = current_user.id
 
     respond_to do |format|
       if @tournament.save

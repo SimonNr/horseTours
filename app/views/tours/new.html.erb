@@ -8,15 +8,7 @@
 	<% end %>
 </div>
 <div id="menue">
-
-	<div id="topMenue">
-	    <ul>
-	            <li> <%= link_to 'Tours', tours_path %> </li>
-	            <li> <%= link_to 'Tournaments', tournaments_path %> </li>
-	            <li> <%= link_to 'Profile', edit_user_registration_path %> </li>
-	    </ul>
-	</div>
-
+	<%= render 'shared/nav' %>
 
 	<ul>
 		<li><%= link_to 'Back', tours_path %></li>

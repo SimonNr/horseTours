@@ -8,13 +8,9 @@
 				Herzlich Willkommen auf HorseTours! 
 				<br>Hier können Sie Ausreittouren und Turniere eintragen. 
 			</div>
-			<div id="menue">
-				<ul>
-					<li> <%= link_to 'Tours', tours_path %> </li>
-					<li> <%= link_to 'Tournaments', tournaments_path %> </li>
-					<li> <%= link_to 'Profile', edit_user_registration_path %> </li>
-				</ul>
-			</div>
+		</div>
+		<div id="menue">
+			<%= render 'shared/nav' %>
 		</div>
 	</body>
 </html>

@@ -8,33 +8,30 @@
                 <th>Enddate</th>
                 <th>Registrationoffice</th>
                 <th>Deadline</th>
+                <th>Author</th>
             </tr>
 
-        <% @tournaments.each do |tournament| %>
-          <tr>
-            <td><%= link_to tournament.title, tournament %></td>
-            <td><%= tournament.category %></td>
-            <td><%= tournament.startDate %></td>
-            <td><%= tournament.endDate %></td>
-            <td><%= tournament.registrationOffice %></td>
-            <td><%= tournament.deadline %></td>
-          </tr>
-        <% end %>
+            <% @tournaments.each do |tournament| %>
+                <tr>
+                    <td><%= link_to tournament.title, tournament %></td>
+                    <td><%= tournament.category %></td>
+                    <td><%= tournament.startDate %></td>
+                    <td><%= tournament.endDate %></td>
+                    <td><%= tournament.registrationOffice %></td>
+                    <td><%= tournament.deadline %></td>
+                    <td><%= User.find(tournament.creator_id).username %></td>
+                </tr>
+            <% end %>
         </table>
     </div>
     <div id="menue">
 
-        <div id="topMenue">
-            <ul>
-                    <li> <%= link_to 'Tours', tours_path %> </li>
-                    <li> <%= link_to 'Tournaments', tournaments_path %> </li>
-                    <li> <%= link_to 'Profile', edit_user_registration_path %> </li>
-            </ul>
-        </div>
-
+        <%= render 'shared/nav' %>
 
         <ul>
-            <li><%= link_to 'New Tournament', new_tournament_path %></li>
+            <% if user_signed_in? %>
+                <li><%= link_to 'New Tourn.', new_tournament_path %></li>
+            <% end %>
             <li><%= link_to 'Back', welcome_index_path %></li>
         </ul>
     </div>

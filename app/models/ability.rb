@@ -11,7 +11,6 @@ class Ability
     end
 
     if user.has_role? :user
-        can :read, :all
         can :create, :all
     else
         can :read, :all

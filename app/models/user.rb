@@ -1,13 +1,11 @@
 class User < ActiveRecord::Base
   rolify
+  after_create :assign_default_role
 
   has_many :creator_tours, class_name: "Tour", foreign_key: :creator_id
 
-  before_create :set_default_role
-
-  private
-  def set_default_role
-    self.roles ||= Role.find_by_name('user')
+  def assign_default_role
+    add_role(:role)
   end
 
   # Include default devise modules. Others available are:

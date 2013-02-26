@@ -5,6 +5,7 @@
 				<th>Title</th>
 				<th>Teaser</th>
 				<th>Difficulty</th>
+				<th>Author</th>
 			</tr>
 
   		  	<% @tours.each do |tour| %>
@@ -12,26 +13,18 @@
   	 	 			<td><%= link_to tour.title, tour %></td>
   	 	 			<td><%= tour.teaser %></td>
   	 	 			<td><%= tour.difficulty %></td>
+  	 	 			<td><%= User.find(tour.creator_id).username %></td>
   	 	 		</tr>
  		   	<% end %>
-
  		   </table>
 
 
 	</div>
 	<div id="menue">
-
-		<div id="topMenue">
-		    <ul>
-		            <li> <%= link_to 'Tours', tours_path %> </li>
-		            <li> <%= link_to 'Tournaments', tournaments_path %> </li>
-		            <li> <%= link_to 'Profile', edit_user_registration_path %> </li>
-		    </ul>
-		</div>
-
+		<%= render 'shared/nav' %>
 
 		<ul>
-			<% if can? :Create, Tour %>
+			<% if user_signed_in? %>
 				<li><%= link_to 'New Tour', new_tour_path %></li>
 			<% end %>
 			<li><%= link_to 'Back', welcome_index_path %></li>
