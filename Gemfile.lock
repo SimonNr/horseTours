@@ -33,6 +33,7 @@ GEM
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
+    cancan (1.6.9)
     cocaine (0.4.2)
     coderay (1.0.8)
     coffee-rails (3.2.2)
@@ -180,6 +181,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
+  cancan
   coffee-rails (~> 3.2.1)
   devise
   factory_girl_rails

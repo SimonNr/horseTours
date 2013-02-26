@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130225142045) do
+ActiveRecord::Schema.define(:version => 20130225143741) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(:version => 20130225142045) do
     t.date     "deadline"
     t.text     "information"
     t.string   "place"
-    t.integer  "creatorID"
+    t.integer  "creator_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
@@ -86,10 +86,10 @@ ActiveRecord::Schema.define(:version => 20130225142045) do
     t.integer  "hours"
     t.integer  "minutes"
     t.text     "description"
-    t.text     "url",         :limit => 255
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "creator_id"
+    t.text     "url"
   end
 
   create_table "users", :force => true do |t|
