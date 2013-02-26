@@ -34,6 +34,14 @@ div label, input, i {
 	background-color: white;
 }
 
+#new_user, #new_user div{
+	background-color: white;
+}
+
+#edit_user, #edit_user div {
+	background-color: white;
+}
+
 #header {
 	border-bottom: 1px solid silver;
 	padding-left: 25px;
@@ -42,14 +50,6 @@ div label, input, i {
 	padding-right: 25px;
 	margin-bottom: 10px;	
 	background-color:#F0F0E8;
-}
-
-#new_user, #new_user div{
-	background-color: white;
-}
-
-#edit_user, #edit_user div {
-	background-color: white;
 }
 
 #header h3 {
@@ -76,6 +76,10 @@ div label, input, i {
 	color: #666666;
 }
 
+#footer {
+	background-color: #F0F0E8;
+	height: 10px;
+}
 
 #content{
 	width:100%;
