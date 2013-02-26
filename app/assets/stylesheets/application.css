@@ -160,3 +160,8 @@ div label, input, i {
 	background-color: #F8F8F0;
 	color: black;
 }
+
+#topMenue {
+	border-bottom: 1px solid silver;
+	background-color: #F8F8F0;
+}

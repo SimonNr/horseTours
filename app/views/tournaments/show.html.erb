@@ -39,7 +39,7 @@
   </p>
 
   <p>
-    <b>Place:</b>
+    <b>Place:</b> <br />
     <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<%= iframe_place(@tournament)%>"></iframe>
   </p>
 
@@ -48,6 +48,15 @@
 </div>
 
 <div id="menue">
+
+  <div id="topMenue">
+    <ul>
+            <li> <%= link_to 'Tours', tours_path %> </li>
+            <li> <%= link_to 'Tournaments', tournaments_path %> </li>
+            <li> <%= link_to 'Profile', edit_user_registration_path %> </li>
+    </ul>
+  </div>
+
   <ul>
     <li><%= link_to 'Edit', edit_tournament_path(@tournament) %></li>
     <li><%= link_to 'Back', tournaments_path %></li>

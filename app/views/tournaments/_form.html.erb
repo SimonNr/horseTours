@@ -17,7 +17,8 @@
   </div>
   <div class="field">
     <%= f.label :category %><br />
-    <%= f.text_field :category %>
+    
+    <%= f.select :category [['AQ','Aq'],['B','b'],['C','c'],['D','d']] %>
   </div>
   <div class="field">
     <%= f.label :startDate %><br />
@@ -40,7 +41,7 @@
     <%= f.text_area :information %>
   </div>
   <div class="field">
-    <%= f.label :place %><br />
+    <%= f.label :place %>(Url)<br />
     <%= f.text_field :place %>
   </div>
   <div class="actions">
