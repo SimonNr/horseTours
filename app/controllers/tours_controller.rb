@@ -77,7 +77,11 @@ class ToursController < ApplicationController
     @tour.destroy
 
     respond_to do |format|
-      format.html { redirect_to tours_url }
+      if params[:src]
+        format.html { redirect_to tours_path }
+      else
+        format.html { redirect_to :back }
+      end
       format.json { head :no_content }
     end
   end

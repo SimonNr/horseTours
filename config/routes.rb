@@ -14,7 +14,10 @@ HorseTours::Application.routes.draw do  get 'welcome/index'
   get 'tours/addComment', :to => 'tours#addComment'
   post 'tours/addComment', :to => 'tours#addComment'
 
-   devise_for :users, :skip => [:sessions]
+  match 'tours/:id' => 'tour#destroy'
+  match 'tournaments/:id' => 'tournament#destroy'
+
+  devise_for :users, :skip => [:sessions]
     as :user do
       get 'login' => 'devise/sessions#new', as: :new_user_session
       post 'login' => 'devise/sessions#create', as: :user_session
@@ -23,7 +26,7 @@ HorseTours::Application.routes.draw do  get 'welcome/index'
       get 'register' => 'devise/registrations#new', as: :new_user_registration
       get 'profile' => 'devise/registrations#edit', as: :edit_user_registration
       delete 'users/edit' => 'tours#destroy'
-    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   after_create :assign_default_role
 
   has_many :creator_tours, class_name: "Tour", foreign_key: :creator_id
+  has_many :creator_tournaments, class_name: "Tournament", foreign_key: :creator_id
   has_many :tourComments
 
   def assign_default_role

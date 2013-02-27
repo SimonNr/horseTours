@@ -78,7 +78,11 @@ class TournamentsController < ApplicationController
     @tournament.destroy
 
     respond_to do |format|
-      format.html { redirect_to tournaments_url }
+      if params[:src]
+        format.html { redirect_to tournaments_path }
+      else
+        format.html { redirect_to :back }
+      end
       format.json { head :no_content }
     end
   end
