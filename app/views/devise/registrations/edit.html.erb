@@ -1,31 +1,53 @@
-<div id="section">
-  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div id="content"> 
+  <div id="section">
+    <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-    <%= devise_error_messages! %>
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+      <%= devise_error_messages! %>
 
-    <div><%= f.label :email %><br />
-    <%= f.email_field :email %></div>
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email %></div>
 
-    <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, :autocomplete => "off" %></div>
+      <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.password_field :password, :autocomplete => "off" %></div>
 
-    <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %></div>
+      <div><%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %></div>
 
-    <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password %></div>
+      <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+      <%= f.password_field :current_password %></div>
 
-    <div><%= f.submit "Update" %></div>
-  <% end %>
-</div>
+      <div><%= f.submit "Update" %></div>
+    <% end %>
 
+    <h2>User's Tours</h2>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Teaser</th>
+        <th>Difficulty</th>
+        <th>Author</th>
+        <th>Edit</th>
+        <th>Destroy</th>
+      </tr>
 
-<div id="menue">
-  <%= render 'shared/nav' %>
-  <ul>
-    <li>  <%= link_to "Delete account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></li>
-    <li><%= link_to "Back", :back %></li>
-  </ul>
-
+      <% current_user.creator_tours.each do |tour| %>
+          <% @tour = Tour.find(tour.id) %>
+          <tr>
+            <td><%= link_to tour.title, tour %></td>
+            <td><%= tour.teaser %></td>
+            <td><%= tour.difficulty %></td>
+            <td><%= User.find(tour.creator_id).username %></td>
+            <td><%= link_to 'Edit', edit_tour_path(tour) %></td>
+            <td><%= link_to 'Destroy', @tour, :confirm => 'Are you sure?', :method => :delete %></td>
+      <% end %>
+    </table>
+  </div>
+  <div id="menue">
+    <%= render 'shared/nav' %>
+    <ul>
+      <li>  <%= link_to "Delete account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></li>
+      <li><%= link_to "Back", :back %></li>
+    </ul>
+  </div>
 </div>

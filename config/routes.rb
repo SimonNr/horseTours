@@ -1,14 +1,14 @@
 HorseTours::Application.routes.draw do  get 'welcome/index'
   resources :tours
   resources :tournaments
+  resources :admin
+
+  ActiveAdmin.routes(self)
 
   get 'welcome/index'
   root :to => 'welcome#index'
 
   get 'tours/new'
-
-  # get 'users/sign_out'
-  # root :to => 'welcome#index'
 
    devise_for :users, :skip => [:sessions]
     as :user do
@@ -18,6 +18,7 @@ HorseTours::Application.routes.draw do  get 'welcome/index'
 
       get 'register' => 'devise/registrations#new', as: :new_user_registration
       get 'profile' => 'devise/registrations#edit', as: :edit_user_registration
+      delete 'users/edit' => 'tours#destroy'
     end
 
   # The priority is based upon order of creation:

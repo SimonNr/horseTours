@@ -1,7 +1,17 @@
-<div id="topMenue">
+<div id="menue_rect">
     <ul>
         <li> <%= link_to 'Tours', tours_path %> </li>
         <li> <%= link_to 'Tournaments', tournaments_path %> </li>
         <li> <%= link_to 'Profile', 	edit_user_registration_path %> </li>
     </ul>
 </div>
+
+<% if user_signed_in? %>
+    <% if current_user.has_role? :admin %>
+        <div id="menue_rect">
+            <ul>
+                <li> <%= link_to 'User Mngmt.', user_managements_path %> </li>
+            </ul>
+        </div>
+    <% end %>
+<% end %>
