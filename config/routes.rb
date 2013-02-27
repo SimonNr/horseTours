@@ -10,6 +10,10 @@ HorseTours::Application.routes.draw do  get 'welcome/index'
 
   get 'tours/new'
 
+  get 'tours/show', :to => 'tours#addComment'
+  get 'tours/addComment', :to => 'tours#addComment'
+  post 'tours/addComment', :to => 'tours#addComment'
+
    devise_for :users, :skip => [:sessions]
     as :user do
       get 'login' => 'devise/sessions#new', as: :new_user_session

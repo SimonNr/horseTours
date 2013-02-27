@@ -3,7 +3,7 @@ class Tour < ActiveRecord::Base
 
   belongs_to :creator, class_name: "User"
   has_many :tour_categories
-  has_many :comments
+  has_many :tourComments
   has_many :categories, through: :tour_categories
 
   has_many :creator_tours, class_name: "Tour", foreign_key: :creator_id

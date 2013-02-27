@@ -81,4 +81,11 @@ class ToursController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def addComment
+    TourComment.create(:user_id => current_user.id, :tour_id => params[:tour_id], :comment => params[:comment])
+    @tour = Tour.find(params[:tour_id])
+
+    redirect_to @tour
+  end
 end
