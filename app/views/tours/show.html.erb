@@ -54,7 +54,7 @@
             <tr>
               <td>
                 <i id="author"><%= User.find(comment.user_id).username + " schrieb:" %></i> <br>
-                  <%= comment.comment %>
+                  <%= simple_format comment.comment %>
               </td>
             </tr>
 
@@ -69,7 +69,7 @@
         <div id="addComment">
           <table>
             <%= form_tag tours_addComment_path do %>
-              <%= text_area_tag :comment, params[:comment] %>
+              <%= text_area_tag :comment, params[:comment] %> <br />
               <%= submit_tag "Kommentieren" %>
               <%= hidden_field_tag :tour_id, params[:tour_id], :value => @tour.id %>
             <% end %>
