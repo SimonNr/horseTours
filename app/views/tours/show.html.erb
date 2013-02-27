@@ -39,8 +39,46 @@
   </p>
 
   <p>
-    <b>Tour:</b>
+    <b>Tour:</b> <br>
     <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<%= iframe_url(@tour)%>"></iframe>
+  </p>
+
+  <p>
+    <div id="commentSection">
+      <div id="showComment">
+        <b>Comments:</b> <br>
+        <table>
+
+          <% @tour.tourComments.each do |comment| %>
+
+            <tr>
+              <td>
+                <i id="author"><%= User.find(comment.user_id).username + " schrieb:" %></i> <br>
+                  <%= comment.comment %>
+              </td>
+            </tr>
+
+          <% end %>
+
+        </table>
+      </div>
+
+      <br>
+
+      <% if user_signed_in? %>
+        <div id="addComment">
+          <table>
+            <%= form_tag tours_addComment_path do %>
+              <%= text_area_tag :comment, params[:comment] %>
+              <%= submit_tag "Kommentieren" %>
+              <%= hidden_field_tag :tour_id, params[:tour_id], :value => @tour.id %>
+            <% end %>
+          </table>
+        </div>
+      <% else %>
+        <%= 'You must be signed in to comment.' %>
+      <% end %>
+    </div>
   </p>
 </div>
 
