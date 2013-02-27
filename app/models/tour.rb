@@ -10,4 +10,8 @@ class Tour < ActiveRecord::Base
 
   validates :description, :difficulty, :teaser, :title, :url, presence: true
   validates :url, format: %r|^http(s?)://maps.google.de/|
+
+  def to_param
+  	"#{id}-#{title.parameterize}"
+  end
 end

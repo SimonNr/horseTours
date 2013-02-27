@@ -5,6 +5,11 @@ class Tournament < ActiveRecord::Base
 
   has_many :creator_tournaments, class_name: "Tournament", foreign_key: :creator_id
 
-  validates :title, :category, :place, :registrationOffice, :information, presence: true 
+  validates :title, :place, :registrationOffice, :information, presence: true 
   validates :place, format: %r|^http(s?)://maps.google.de/| 
+
+  def to_param
+  	"#{id}-#{title.parameterize}"
+  end
+
 end
