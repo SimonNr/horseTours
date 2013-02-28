@@ -74,7 +74,10 @@ class ToursController < ApplicationController
   # DELETE /tours/1.json
   def destroy
     @tour = Tour.find(params[:id])
-    @tour.destroy
+
+    if @tour.creator == current_user
+      @tour.destroy
+    end
 
     respond_to do |format|
       if params[:src]
