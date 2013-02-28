@@ -168,4 +168,5 @@ div label, input, i {
 #menue_rect {
 	border-bottom: 1px solid silver;
 	background-color: #F8F8F0;
+	padding-bottom: 10px;
 }

@@ -58,7 +58,7 @@ class TournamentsController < ApplicationController
   # PUT /tournaments/1.json
   def update
     @tournament = Tournament.find(params[:id])
-    @tour.creator_id = current_user.id
+    @tournament.creator_id = current_user.id
 
     respond_to do |format|
       if @tournament.update_attributes(params[:tournament])

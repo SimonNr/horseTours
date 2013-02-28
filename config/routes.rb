@@ -1,9 +1,9 @@
-HorseTours::Application.routes.draw do  get 'welcome/index'
+HorseTours::Application.routes.draw do get 'welcome/index'
+  ActiveAdmin.routes(self)
+  
   resources :tours
   resources :tournaments
-  resources :admin
-
-  ActiveAdmin.routes(self)
+  resources :messages
 
   get 'welcome/index'
   root :to => 'welcome#index'
