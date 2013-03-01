@@ -6,9 +6,6 @@ class User < ActiveRecord::Base
   has_many :creator_tournaments, class_name: "Tournament", foreign_key: :creator_id
   has_many :tourComments
 
-  has_many :userMessages
-  has_many :messages, :through => :userMessages
-
 
   def assign_default_role
     add_role(:role)
