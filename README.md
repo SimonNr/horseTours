@@ -10,15 +10,13 @@
 </ul>
 
 <h3>Introduction</h3>
-<p>Hello and welcome to this page, this is Simon.</p>
+<p>Hello and welcome to this page, my name is Simon, and I am introducing you to HorseTours, product of a two member team work.</p>
 
-<p>You are currently visiting the GitHub page of our (Joyce and Simon) project done for web development lecure taught at FH Muenster by Peter and Thomas of Zweitag. (<a href="http://www.zweitag.de/en">Zweitag's page</a><br>
-At this point, let me thank you two for introducing us to Ruby and Rails and teaching us many things about these languages.</p>
-
-<p></p>
+<p>You are currently visiting the GitHub page of our (Joyce and Simon) project done for web development lecture</p>
+<p>taught at FH Muenster by Peter and Thomas of Zweitag. (<a href="http://www.zweitag.de/en">Zweitag's page</a>)</p><br>
 
 <h3>Purpose</h3>
-<p></p>
+<p>The purpose of this project was the introduction to Ruby on Rails and developing like the 'big' guys do.</p>
 
 <h3>Installation</h3>
 <p>For the following installation, we are presume that you have RoR installed.</p>
@@ -38,16 +36,16 @@ At this point, let me thank you two for introducing us to Ruby and Rails and tea
 <p>People who pushed us forward or helped a lot.</p>
 <ul>
 	<li>Peter Grosskopf, Zweitag - For introducing us to RoR and putting up with our questions. ;)</li>
-	<li>Thomas Hollstegge, Zweitag - For introducing us to RoR as well as answering our (partly absurd) questions.</li>
+	<li>Thomas Hollstegge, Zweitag - For introducing us to RoR as well as answering our questions.</li>
 	<li>Klaus Fleerkötter, Zweitag - For solving the ActiveAdmin problem with our project. Thanks a bunch.</li>
 	<br>
 	<li>Marvin C. - For providing us with help for the smaller and bigger problems, always being patient and furthermore, for finding a exploitable security leak in our application.</li>
 	<li>Dominic R. - For assisting us with the RSpec and Capybara test.</li>
 	<li>Till K. - For helping us with the RSpec tests and various questions regarding models</li>
 	<li>Tobias P. - For motivating us and for assisting with the implementation of ActiveAdmin.</li>
-	<li>And many others, who assisted and provided feedback to further develop this application.<br><u>Great thanks to you all!</u></li>
+	<li>And many others, who assisted and provided feedback to further developing this application.<br><u>Great thanks to you all!</u></li>
 </ul>
 
 <h3>Disclaimer</h3>
-<p>This SOFTWARE PRODUCT is provided by Simon M. and Joyce I. "as is" and "with all faults." We make no representations or warranties of any kind concerning the safety, suitability, lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT. There are inherent dangers in the use of any software, and you are solely responsible for determining whether this SOFTWARE PRODUCT is compatible with your equipment and other software installed on your equipment. You are also solely responsible for the protection of your equipment and backup of your data, and we as the providers will not be liable for any damages you may suffer in connection with using, modifying, or distributing this SOFTWARE PRODUCT.</p>
-<p>Taken from and modified:<a href="http://giladmanor.blogspot.de/2009/11/software-disclaimer-sample.html">Gilad Manor Blogspot</a></p>
+<p>This SOFTWARE PRODUCT is provided by Simon M. and Joyce I., further mentioned as "PROVIDER", "as is" and "with all faults." We make no representations or warranties of any kind concerning the safety, suitability, lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT. There are inherent dangers in the use of any software, and you are solely responsible for determining whether this SOFTWARE PRODUCT is compatible with your equipment and other software installed on your equipment. You are also solely responsible for the protection of your equipment and backup of your data, and we as the providers will not be liable for any damages you may suffer in connection with using, modifying, or distributing this SOFTWARE PRODUCT.</p>
+<p>Taken from and modified: <a href="http://giladmanor.blogspot.de/2009/11/software-disclaimer-sample.html">Gilad Manor Blogspot</a></p>
