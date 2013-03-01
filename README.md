@@ -12,8 +12,7 @@
 <h3>Introduction</h3>
 <p>Hello and welcome to this page, my name is Simon, and I am introducing you to HorseTours, product of a two member team work.</p>
 
-<p>You are currently visiting the GitHub page of our (Joyce and Simon) project done for web development lecture</p>
-<p>taught at FH Muenster by Peter and Thomas of Zweitag. (<a href="http://www.zweitag.de/en">Zweitag's page</a>)</p><br>
+<p>You are currently visiting the GitHub page of our (Joyce and Simon) project done for web development lecture<br>taught at FH Muenster by Peter and Thomas of Zweitag. (<a href="http://www.zweitag.de/en">Zweitag's page</a>)</p><br>
 
 <h3>Purpose</h3>
 <p>The purpose of this project was the introduction to Ruby on Rails and developing like the 'big' guys do.</p>
