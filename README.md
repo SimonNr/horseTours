@@ -12,7 +12,10 @@
 <h3>Introduction</h3>
 <p>Hello and welcome to this page, my name is Simon, and I am introducing you to HorseTours, product of a two member team work.</p>
 
-<p>You are currently visiting the GitHub page of our (Joyce and Simon) project done for web development lectures<br>taught at FH Muenster by Peter and Thomas from Zweitag. (<a href="http://www.zweitag.de/en">Zweitag's page</a>)</p><br>
+<p>This project done for web development lectures taught at FH Muenster by Peter and Thomas from Zweitag (<a href="http://www.zweitag.de/en">Zweitag's page</a>) and can be tested <a href="horses.herokuapp.com">here.</a></p>
+<p>Please note that ActiveAdmin is not working with Heroku, the issue is known but there is currently no solution available.<br>
+If you know of a solution, please feel free to contact us via the bug issue report function.</p>
+<br>
 
 <h3>Purpose</h3>
 <p>The purpose of this project was the introduction to Ruby on Rails and developing like the 'big' guys do.</p>
