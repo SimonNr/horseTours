@@ -10,9 +10,6 @@ gem 'rolify'
 gem 'RedCloth'
 gem 'cancan'
 gem 'activeadmin'
-gem 'messaging', git: 'git://github.com/frodefi/rails-messaging.git'
-gem 'mailboxer', git: 'git://github.com/ging/mailboxer.git'
-gem 'sunspot_solr'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
