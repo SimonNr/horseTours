@@ -14,6 +14,7 @@
   <div class="field">
     <%= f.label :to %><br />
     <%= f.number_field :user_ids %>
+    <%= hidden_field_tag :to, params[:to], :value => @message.to %>
   </div>
   <div class="field">
     <%= f.label :subject %><br />

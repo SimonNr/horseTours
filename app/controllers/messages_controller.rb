@@ -53,7 +53,7 @@ class MessagesController < InheritedResources::Base
 
     m = params[:message]
     @message.users = Array.new
-    m[:user_ids].to_s.split(',').each {|i| @message.users << User.find(i)}
+    m[:user_ids].to_s.split(',').each {|i| @message.to << User.find(i)}
 
     respond_to do |format|
       if @message.save

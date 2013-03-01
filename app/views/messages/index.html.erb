@@ -7,7 +7,7 @@
                     <% @inbox.each do |message| %>
                         <tr class="row">
                             <!-- # Sucht nach der ID ! -->
-                            <td width="30%">Von: <%= User.find(message.from).username %></td>
+                            <td width="30%">Von: <%= User.find(message.from) %></td>
                             <td>Betreff: <%= message.subject %></td>
                             <td width="20px"><%= link_to image_tag('icons/down.png'), '#message_' + message.id.to_s, onclick: 'Application.showContent(this, ' + message.id.to_s + ')' %></td>
                         </tr>
@@ -29,10 +29,10 @@
                     <% @outbox.each do |message| %>
                         <tr>
                             <!-- # Sucht nach der ID ! -->
-                            <td width="30%">An:
+                            <td>An:
                                 <% to = ""
-                                    @outbox.each do |o|
-                                        UserMessage.where(message_id: o.id).each do |u|
+                                    @outbox.each do |out|
+                                        UserMessage.where(message_id: out.id).each do |u|
                                             to += User.find(u.user_id).username + ", "
                                         end
                                     end
@@ -45,6 +45,11 @@
                         </tr>
                         <tr>
                             <td id="message_<%= message.id %>" style="display:none" colspan="2"><%= message.content %></td>
+                        </tr>
+                        <tr>
+                            <% @outbox.each do |msg| %>
+                                <%= User.find(Message.find(msg.id).to).username %>
+                            <% end %>
                         </tr>
                     <% end %>
                 </table>
