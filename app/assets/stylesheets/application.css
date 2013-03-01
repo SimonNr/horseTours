@@ -78,7 +78,7 @@ div label, input, i {
 
 #footer {
 	background-color: #F0F0E8;
-	height: 10px;
+	height: 50px;
 }
 
 #content{
@@ -169,4 +169,34 @@ div label, input, i {
 	border-bottom: 1px solid silver;
 	background-color: #F8F8F0;
 	padding-bottom: 10px;
+}
+
+#commentSection {
+	background-color: white;
+}
+
+#showComment {
+	background-color: white;
+}
+
+#showComment table {
+	padding-left: 2px;
+}
+
+#showComment table tr td p{
+	margin-top: 6px;
+}
+
+
+#addComment {
+	background-color: white;
+}
+
+#author {
+	border-bottom: 1px solid silver;
+}
+
+#comment {
+	height: 150px;
+	width: 350px;
 }

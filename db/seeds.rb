@@ -72,3 +72,9 @@ to5.save
 
 
 com1 = TourComment.create(user_id: user.id, tour_id: t1.id, comment:"Nice tour. Easy to follow.")
+com2 = TourComment.create(user_id: a1.id, tour_id: t1.id, comment:"Beautiful, never had so much fun.")
+com3 = TourComment.create(user_id: user.id, tour_id: t1.id, comment:"Me too.")
+com4 = TourComment.create(user_id: user.id, tour_id: t4.id, comment:"Very relaxed tour.")
+com5 = TourComment.create(user_id: a2.id, tour_id: t5.id, comment:"Long Tour. But a lot good places to ride.<br>We made a stop at the restaurant ;)")
+com6 = TourComment.create(user_id: user.id, tour_id: t2.id, comment:"Good Tour.")
+com7 = TourComment.create(user_id: user.id, tour_id: t3.id, comment:"Nice tour.")

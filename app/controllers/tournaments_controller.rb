@@ -62,7 +62,7 @@ class TournamentsController < ApplicationController
 
     respond_to do |format|
       if @tournament.update_attributes(params[:tournament])
-        format.html { redirect_to @tournament, notice: 'Tournament was successfully updated.' }
+        format.html { redirect_to @tournament }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -81,11 +81,13 @@ class TournamentsController < ApplicationController
     end
 
     respond_to do |format|
+
       if params[:src]
         format.html { redirect_to tournaments_path }
       else
         format.html { redirect_to :back }
       end
+
       format.json { head :no_content }
     end
   end
