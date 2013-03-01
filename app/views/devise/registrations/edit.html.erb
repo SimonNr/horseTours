@@ -20,13 +20,12 @@
       <div><%= f.submit "Update" %></div>
     <% end %>
 
-    <h2>User's Tours</h2>
+    <h2><%= User.find(current_user.id).username %>'s Tours</h2>
     <table>
       <tr>
         <th>Title</th>
         <th>Teaser</th>
         <th>Difficulty</th>
-        <th>Author</th>
         <th>Edit</th>
         <th>Destroy</th>
       </tr>
@@ -37,12 +36,31 @@
             <td><%= link_to tour.title, tour %></td>
             <td><%= tour.teaser %></td>
             <td><%= tour.difficulty %></td>
-            <td><%= User.find(tour.creator_id).username %></td>
             <td><%= link_to 'Edit', edit_tour_path(tour) %></td>
             <td><%= link_to 'Destroy', @tour, :confirm => 'Are you sure?', :method => :delete %></td>
       <% end %>
     </table>
+
+    <h2><%= User.find(current_user.id).username %>'s Tournaments</h2>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Edit</th>
+        <th>Destroy</th>
+      </tr>
+
+      <% current_user.creator_tournaments.each do |tournament| %>
+          <% @tournament = Tournament.find(tournament.id) %>
+          <tr>
+            <td><%= link_to tournament.title, tournament %></td>
+            <td><%= tournament.category %></td>
+            <td><%= link_to 'Edit', edit_tournament_path(tournament) %></td>
+            <td><%= link_to 'Destroy', @tournament, :confirm => 'Are you sure?', :method => :delete %></td>
+      <% end %>
+    </table>
   </div>
+
   <div id="menue">
     <%= render 'shared/nav' %>
     <ul>

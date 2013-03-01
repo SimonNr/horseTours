@@ -75,10 +75,19 @@ class TournamentsController < ApplicationController
   # DELETE /tournaments/1.json
   def destroy
     @tournament = Tournament.find(params[:id])
-    @tournament.destroy
+    
+    if @tournament.creator == current_user
+      @tournament.destroy
+    end
 
     respond_to do |format|
-      format.html { redirect_to tournaments_url, notice: 'Tournament was successfully destroyed.' }
+
+      if params[:src]
+        format.html { redirect_to tournaments_path }
+      else
+        format.html { redirect_to :back }
+      end
+
       format.json { head :no_content }
     end
   end

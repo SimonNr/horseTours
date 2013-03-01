@@ -74,10 +74,17 @@ class ToursController < ApplicationController
   # DELETE /tours/1.json
   def destroy
     @tour = Tour.find(params[:id])
-    @tour.destroy
+
+    if @tour.creator == current_user
+      @tour.destroy
+    end
 
     respond_to do |format|
-      format.html { redirect_to tours_url }
+      if params[:src]
+        format.html { redirect_to tours_path }
+      else
+        format.html { redirect_to :back }
+      end
       format.json { head :no_content }
     end
   end
